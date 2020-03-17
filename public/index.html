@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="451026386818-tn45jj26gp4sm6mr1j55f1lb3qk94b30.apps.googleusercontent.com">
+    <title>GOOGLE SIGN IN</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+    <div class="card mt-5">
+        <div class="card-header">
+          Iniciar sesion con google chrome 
+        </div>
+        <div class="card-body">
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <a href="#" class="btn btn-primary btn-block mt-2" onclick="signOut();">Sign out</a>
+        </div>
+      </div>
+    </div>
+
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="js/script.js"></script>
+</body>
+</html>

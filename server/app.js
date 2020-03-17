@@ -5,6 +5,10 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const router = require('./routes/usuario')
 const login = require('./routes/login')
+const categoria = require('./routes/categorias')
+const productos = require('./routes/productos')
+
+const path = require('path');
 
 const app = express();
 
@@ -19,8 +23,12 @@ app.use(bodyParser.json())
 
 app.use(router);
 app.use(login);
+app.use(categoria);
+app.use(productos);
 
 
+// usar archivos estaticos
+app.use(express.static(path.resolve(__dirname ,'../public')));
 
 mongoose.connect(process.env.URLDB, (err, res) => {
 

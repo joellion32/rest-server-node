@@ -1,11 +1,12 @@
+require('../config/config');
 const express = require('express');
 const bcrypt = require('bcrypt');
 const Usuario = require('../models/usuario');
 const jwt = require('jsonwebtoken');
-require('../config/config');
+
 
 const app = express();
-
+   
 // para login de usuario
 app.post('/login', (req, res) => {
 let body =  req.body;
@@ -49,5 +50,14 @@ token: token
 }); // cierre del find
 }); // cierre de el request
 
+// login google
+app.post('/google', (req, res) => {
+let token = req.body.idtoken;
+
+
+res.json({
+token
+});
+})
 
 module.exports = app;
