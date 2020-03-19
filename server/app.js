@@ -7,7 +7,8 @@ const router = require('./routes/usuario')
 const login = require('./routes/login')
 const categoria = require('./routes/categorias')
 const productos = require('./routes/productos')
-
+const upload = require('./routes/upload')
+const imagenes = require('./routes/imagenes')
 const path = require('path');
 
 const app = express();
@@ -25,6 +26,8 @@ app.use(router);
 app.use(login);
 app.use(categoria);
 app.use(productos);
+app.use(upload);
+app.use(imagenes);
 
 
 // usar archivos estaticos
